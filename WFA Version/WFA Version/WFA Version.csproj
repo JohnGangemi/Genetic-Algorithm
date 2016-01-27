@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AEC7FA32-B4F7-465A-9D55-DC26331CC845}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WFA_Version</RootNamespace>
     <AssemblyName>WFA Version</AssemblyName>
@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evolution.cs" />
+    <Compile Include="Individual.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
