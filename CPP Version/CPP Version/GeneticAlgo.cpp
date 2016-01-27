@@ -8,7 +8,7 @@
 // alter these parameters to observe their influence
 //
 #define TARGET "Hello World"
-#define IND_SIZE 11 // total number of genes
+#define IND_SIZE sizeof(TARGET) - 1 // total number of genes
 #define MAX_GENS 100 // max number of generations allowed
 #define POP_SIZE 500 // population size
 #define MUT_RATE 0.02 // mutation rate out of 100% 
