@@ -56,6 +56,7 @@
       this.label6 = new System.Windows.Forms.Label();
       this.lstBx_output = new System.Windows.Forms.ListBox();
       this.btn_about = new System.Windows.Forms.Button();
+      this.lbl_time = new System.Windows.Forms.Label();
       ((System.ComponentModel.ISupportInitialize)(this.trkbar_maxGenerations)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.trkbar_populationSize)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.trkBar_mutationRate)).BeginInit();
@@ -353,6 +354,14 @@
       this.btn_about.UseVisualStyleBackColor = true;
       this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
       // 
+      // lbl_time
+      // 
+      this.lbl_time.AutoSize = true;
+      this.lbl_time.Location = new System.Drawing.Point(257, 656);
+      this.lbl_time.Name = "lbl_time";
+      this.lbl_time.Size = new System.Drawing.Size(0, 17);
+      this.lbl_time.TabIndex = 101;
+      // 
       // MainForm
       // 
       this.AcceptButton = this.btn_run;
@@ -360,6 +369,7 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.CancelButton = this.btn_reset;
       this.ClientSize = new System.Drawing.Size(729, 735);
+      this.Controls.Add(this.lbl_time);
       this.Controls.Add(this.btn_about);
       this.Controls.Add(this.lstBx_output);
       this.Controls.Add(this.label6);
@@ -432,6 +442,7 @@
         private System.Windows.Forms.Label label6;
     private System.Windows.Forms.ListBox lstBx_output;
     private System.Windows.Forms.Button btn_about;
+    private System.Windows.Forms.Label lbl_time;
   }
 }
 

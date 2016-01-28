@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 
@@ -71,6 +72,8 @@ namespace WFA_Version
         btn_reset.Enabled = false;
         btn_about.Enabled = false;
 
+        var timer = Stopwatch.StartNew();
+
         // Initialize population
         List<Individual> population = new List<Individual>();
         for (int i = 0; i < populationSize; i++)
@@ -92,9 +95,11 @@ namespace WFA_Version
               elite = i;
           }
 
+          // display most fit individual
           string result = "Generation: " + generation + "\tBest Fit: " + population[elite].GetPhenotype();
           lstBx_output.Items.Add(result);
 
+          // evaluate fitness of most fit individual
           if (population[elite].GetPhenotype().Equals(target))
             break;
 
@@ -115,11 +120,16 @@ namespace WFA_Version
             newPopulation.Add(child);
           }
 
+          // kill off current generation
           population.Clear();
           population.AddRange(newPopulation);
 
           generation++;
         }
+
+        timer.Stop();
+        var runTime = timer.ElapsedMilliseconds;
+        lbl_time.Text = "Run time: " + runTime + "ms";
       }
       else
       {
@@ -138,6 +148,7 @@ namespace WFA_Version
       txtBx_target.Text = "Enter Text";
       ResetSliders();
       lstBx_output.Items.Clear();
+      lbl_time.Text = "";
     }
 
     private void btn_about_Click(object sender, EventArgs e)
