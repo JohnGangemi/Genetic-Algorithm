@@ -6,3 +6,7 @@ Practice with Machine Learning, in particular the Genetic Algorithm. I was first
  - project files for visual studio
  - however, you can always compile the file GeneticAlgo.cpp and run it from a terminal
  - CLI Output.png shows an example
+- WFA Version
+ - project files for visual studio
+ - supports GUI
+ - requires windows environment
